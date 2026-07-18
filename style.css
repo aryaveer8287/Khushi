@@ -1,0 +1,65 @@
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+    font-family:Arial,sans-serif;
+}
+
+.container{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    width:80%;
+    max-width:500px;
+}
+
+button{
+    padding:12px 25px;
+    margin:10px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+#yesBtn{
+    background:#ff4d6d;
+    color:white;
+}
+
+#noBtn{
+    background:white;
+}
+
+.quote{
+    margin:15px;
+    font-style:italic;
+}
+
+.heart{
+    position:absolute;
+    color:pink;
+    animation:float 6s linear infinite;
+}
+
+.sparkle{
+    position:absolute;
+    color:white;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes float{
+    from{transform:translateY(100vh);}
+    to{transform:translateY(-100px);}
+}
+
+@keyframes twinkle{
+    50%{opacity:0.3;}
+}
