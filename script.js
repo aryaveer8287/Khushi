@@ -13,7 +13,7 @@ const quotes = [
 let moveCount = 0;
 
 noBtn.addEventListener("mouseover", () => {
-    if(moveCount < 5){
+    if(moveCount < 50){
         noBtn.style.position = "absolute";
         noBtn.style.left = Math.random()*80 + "%";
         noBtn.style.top = Math.random()*80 + "%";
@@ -25,7 +25,21 @@ noBtn.addEventListener("mouseover", () => {
 
 yesBtn.addEventListener("click", () => {
     result.innerHTML =
-        "<h2>Thank you, Khushi ❤️</h2><p>Wishing you happiness and smiles. 💖</p>";
+        "<h2>Thank you, Khushi ❤️</h2>Thank you for giving us another chance. 🥹💖<br><br>
+
+            Your trust means everything to me, and I don't want to take it for granted.<br><br>
+
+            I can't change the past, but I can work to be a better person and a better partner from today onward.<br><br>
+
+            Thank you for believing in us. Here's to a fresh start, more understanding, and many happy memories together. ❤️🌹
+        </p>
+    `;
+
+    document.querySelector(".buttons").style.display = "none";
+
+    createConfetti();
+    createFireworks();
+});. 💖</p>";
 });
 
 function createHeart(){
