@@ -9,18 +9,65 @@ const quotes = [
     "Every story deserves kindness ❤️",
     "You can choose whatever feels right 🌸"
 ];
+const quotes = [
+  "🥹 Please don't be so quick... just hear my heart once more. ❤️",
+  "💕 Every beautiful story deserves one more chance.",
+  "🌹 My heart is still hoping for us.",
+  "✨ You make my world brighter, Khushi.",
+  "❤️ One smile from you means everything to me.",
+  "🥰 I'll always be grateful for our memories.",
+  "💖 You're worth every effort.",
+  "🌸 Just one more chance to make things right.",
+  "😊 Love grows with understanding.",
+  "💞 You are special to me.",
+  "🌹 I promise to do better.",
+  "❤️ My heart still chooses you.",
+  "🥹 Thank you for reading this far.",
+  "✨ Whatever you choose, I'll respect it.",
+  "🌸 You can decide freely. ❤️"
+];
 
 let moveCount = 0;
 
 noBtn.addEventListener("mouseover", () => {
-    if(moveCount < 5){
+
+    if (moveCount < 15) {
+
         noBtn.style.position = "absolute";
-        noBtn.style.left = Math.random()*80 + "%";
-        noBtn.style.top = Math.random()*80 + "%";
-        quote.innerText = quotes[Math.floor(Math.random()*quotes.length)];
+        noBtn.style.left = Math.random() * 80 + "%";
+        noBtn.style.top = Math.random() * 80 + "%";
+
+        quote.innerHTML = quotes[moveCount];
+
         moveCount++;
+
+    } else {
+
+        // After 15 moves, the button stays in place.
+        noBtn.style.position = "static";
+
     }
+
 });
+
+noBtn.addEventListener("click", () => {
+
+    result.innerHTML = `
+        <h2>🌸 Thank You, Khushi 🌸</h2>
+
+        <p style="font-size:18px;line-height:1.8;">
+            Thank you for reading my message and for being honest with me. ❤️<br><br>
+
+            I respect your decision completely.<br><br>
+
+            I genuinely wish you happiness and all the best for your future. 🌸
+        </p>
+    `;
+
+    document.querySelector(".buttons").style.display = "none";
+
+});
+
 
 yesBtn.addEventListener("click", () => {
 
