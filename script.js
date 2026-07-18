@@ -25,21 +25,54 @@ noBtn.addEventListener("mouseover", () => {
 yesBtn.addEventListener("click", () => {
 
     result.innerHTML = `
-    <h2>❤️ Thank You Khushi ❤️</h2>
-    <p>You made my day! 💖</p>
+        <h2>❤️ Thank You, Khushi ❤️</h2>
+
+        <p style="font-size:18px;line-height:1.8;">
+            Thank you for giving us another chance. 🥹💖<br><br>
+
+            Your trust means everything to me, and I don't want to take it for granted.<br><br>
+
+            I can't change the past, but I can work to be a better person and a better partner from today onward.<br><br>
+
+            Thank you for believing in us. Here's to a fresh start, more understanding, and many happy memories together. ❤️🌹
+        </p>
     `;
 
+    document.querySelector(".buttons").style.display = "none";
+
+    noBtn.addEventListener("click", () => {
+
+    result.innerHTML = `
+        <h2>🌸 Thank You, Khushi 🌸</h2>
+
+        <p style="font-size:18px;line-height:1.8;">
+            Thank you for taking the time to read my message and for being honest with me. ❤️<br><br>
+
+            I respect your decision completely, even though it isn't the answer I was hoping for.<br><br>
+
+            I truly hope life brings you happiness, success, and peace in everything you do.<br><br>
+
+            Thank you for the memories we shared. I'll always wish the best for you. Take care. 🌸
+        </p>
+    `;
+
+    document.querySelector(".buttons").style.display = "none";
+});
+
+    createConfetti();
+    createFireworks();
+});
     createConfetti();
     createFireworks();
 });
 
 // 🎉 Confetti
 function createConfetti(){
-    for(let i=0;i<150;i++){
+    for(let i=0;i<40;i++){
         let confetti=document.createElement("div");
         confetti.innerHTML="🎉";
         confetti.style.position="fixed";
-        confetti.style.left=Math.random()*100+"vw";
+        confetti.style.left=Math.random()*10+"vw";
         confetti.style.top="-20px";
         confetti.style.fontSize=(10+Math.random()*20)+"px";
         confetti.style.transition="4s linear";
